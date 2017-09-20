@@ -77,6 +77,8 @@ var ForgeXLS = {
 
       var wb = new Workbook();
       jQuery.each(tables, function (name, table) {
+        console.log(table);                                                 //intro
+        console.log(name);                                                  //intro
         if (name.indexOf('<')==-1) { // skip tables starting with <
           var ws = ForgeXLS.sheetFromTable(table);
           wb.SheetNames.push(name);
@@ -99,7 +101,7 @@ var ForgeXLS = {
     table.forEach(function (object) {
       jQuery.each(object, function (propName, propValue) {
         if (allProperties.indexOf(propName) == -1)
-          console.log(propName);                                    //introduced
+          console.log(propName);                                    //intro
           allProperties.push(propName);
       })
     });
@@ -161,9 +163,11 @@ var ForgeXLS = {
         return;
       }
       var guid = metadata.data.metadata[0].guid;
-
+            console.log('guid:'+guid);                                                                //intro
       ForgeXLS.Utility.getHierarchy(urn, guid, token, function (hierarchy) {
+            console.log('hierarchy:'+hierarchy);                                                      //intro
         ForgeXLS.Utility.getProperties(urn, guid, token, function (properties) {
+            console.log('properties:'+properties);                                                    //intro
           callback(ForgeXLS.prepareRawData(hierarchy, properties));
         });
       });
@@ -191,6 +195,7 @@ var ForgeXLS = {
     category.forEach(function (item) {
       if (typeof(item.objects) === 'undefined') {
         if (!ids.indexOf(item.objectid) >= 0)
+          console.log('item.objectId:'+item.objectId);                                            //intro
           ids.push(item.objectid);
       }
       else
@@ -204,8 +209,10 @@ var ForgeXLS = {
       if (obj.objectid != id) return;
 
       data['Viewer ID'] = id;
-      data['Revit ID'] = obj.name.match(/\d+/g)[0];
+      data['Revit ID'] = obj.name.match(/\d+/g)[0];      
       data['Name'] = obj.name.replace('[' + data['Revit ID'] + ']', '').trim();
+      
+      console.log('data[Name]':+ data['Name']);                                               //intro
 
       for (var propGroup in obj.properties) {
         if (propGroup.indexOf('__') > -1) break;
@@ -217,6 +224,7 @@ var ForgeXLS = {
         }
       }
     });
+    console.log('data:'+ data);                                                            //intro
     return data;
   }
 };
@@ -224,7 +232,9 @@ var ForgeXLS = {
 function Workbook() {
   if (!(this instanceof Workbook)) return new Workbook();
   this.SheetNames = [];
+  console.log('this.SheetNames :'+this.SheetNames);                                       //intro
   this.Sheets = {};
+  console.log('this.Sheets :'+this.Sheets);                                              //intro
 }
 
 function datenum(v, date1904) {
