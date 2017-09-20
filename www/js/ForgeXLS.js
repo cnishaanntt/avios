@@ -99,6 +99,7 @@ var ForgeXLS = {
     table.forEach(function (object) {
       jQuery.each(object, function (propName, propValue) {
         if (allProperties.indexOf(propName) == -1)
+          console.log(propName);                                    //introduced
           allProperties.push(propName);
       })
     });
@@ -178,6 +179,7 @@ var ForgeXLS = {
       var rows = [];
       idsOnCategory.forEach(function (objectid) {
         var columns = ForgeXLS.getProperties(objectid, properties);
+        console.log('columns:'+columns);
         rows.push(columns);
       });
       tables[category.name] = rows;
