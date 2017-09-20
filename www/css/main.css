@@ -33,3 +33,10 @@ body {
     background-repeat: no-repeat;
     background-position: center;
 }
+
+.toolbarXSButton {
+    background-image: url(/img/a360hub.png);
+    background-size: 16px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
