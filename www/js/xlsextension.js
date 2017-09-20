@@ -34,24 +34,24 @@ XLSExtension.prototype.load = function () {
 
   createUI = function () {
     // Button 1
-    var button1 = new Autodesk.Viewing.UI.Button('toolbarXLS');
+ /*   var button1 = new Autodesk.Viewing.UI.Button('toolbarXLS');
     button1.onClick = function (e) {
         ForgeXLS.downloadXLSX(documentId, fileName + ".xlsx", token, statusCallback, fileType );/*Optional*/
     };
-    button1.addClass('toolbarXLSButton');
-    button1.setToolTip('Export to .XLSX');
+  /*  button1.addClass('toolbarXLSButton');
+    button1.setToolTip('Export to .XLSX');*/
     
     // Button 2
     var button2 = new Autodesk.Viewing.UI.Button('toolbarXLS');
     button1.onClick = function (e) {
-       status('just like it');
+       alert('just like it');
     };
     button2.addClass('toolbarXLSButton');
     button2.setToolTip(':-)');
 
     // SubToolbar
     this.subToolbar = new Autodesk.Viewing.UI.ControlGroup('myAppGroup1');
-    this.subToolbar.addControl(button1);
+   // this.subToolbar.addControl(button1);
     this.subToolbar.addControl(button2);
     
 
