@@ -42,17 +42,17 @@ XLSExtension.prototype.load = function () {
     button1.setToolTip('Export to .XLSX');*/
     
     // Button 2
-    var button2 = new Autodesk.Viewing.UI.Button('toolbarXLS');
+    var button1 = new Autodesk.Viewing.UI.Button('toolbarXLS');
     button1.onClick = function (e) {
        alert('just like it');
     };
-    button2.addClass('toolbarXLSButton');
-    button2.setToolTip(':-)');
+    button1.addClass('toolbarXLSButton');
+    button1.setToolTip(':-)');
 
     // SubToolbar
     this.subToolbar = new Autodesk.Viewing.UI.ControlGroup('myAppGroup1');
    // this.subToolbar.addControl(button1);
-    this.subToolbar.addControl(button2);
+    this.subToolbar.addControl(button1);
     
 
     _viewer.toolbar.addControl(this.subToolbar);
