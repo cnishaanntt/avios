@@ -77,8 +77,8 @@ var ForgeXLS = {
 
       var wb = new Workbook();
       jQuery.each(tables, function (name, table) {
-       console.log(table);                                                 //intro
-       console.log(name);                                                  //intro
+       //console.log(table);                                                 //intro
+      // console.log(name);                                                  //intro
         if (name.indexOf('<')==-1) { // skip tables starting with <
           var ws = ForgeXLS.sheetFromTable(table);
           wb.SheetNames.push(name);
@@ -101,7 +101,7 @@ var ForgeXLS = {
     table.forEach(function (object) {
       jQuery.each(object, function (propName, propValue) {
         if (allProperties.indexOf(propName) == -1)
-         console.log(propName);                                    //intro
+         //console.log(propName);                                    //intro
           allProperties.push(propName);
       })
     });
@@ -163,11 +163,11 @@ var ForgeXLS = {
         return;
       }
       var guid = metadata.data.metadata[0].guid;
-            console.log('guid:'+guid);                                                                //intro
+            //console.log('guid:'+guid);                                                                //intro
       ForgeXLS.Utility.getHierarchy(urn, guid, token, function (hierarchy) {
-            console.log('hierarchy:'+hierarchy);                                                      //intro
+            //console.log('hierarchy:'+hierarchy);                                                      //intro
         ForgeXLS.Utility.getProperties(urn, guid, token, function (properties) {
-            console.log('properties:'+properties);                                                    //intro
+            //console.log('properties:'+properties);                                                    //intro
           callback(ForgeXLS.prepareRawData(hierarchy, properties));
         });
       });
@@ -183,7 +183,7 @@ var ForgeXLS = {
       var rows = [];
       idsOnCategory.forEach(function (objectid) {
         var columns = ForgeXLS.getProperties(objectid, properties);
-        console.log('columns:'+columns);
+        //console.log('columns:'+columns);
         rows.push(columns);
       });
       tables[category.name] = rows;
@@ -195,7 +195,7 @@ var ForgeXLS = {
     category.forEach(function (item) {
       if (typeof(item.objects) === 'undefined') {
         if (!ids.indexOf(item.objectid) >= 0)
-         console.log('item.objectId:'+item.objectId);                                            //intro
+         //console.log('item.objectId:'+item.objectId);                                            //intro
           ids.push(item.objectid);
       }
       else
@@ -212,7 +212,7 @@ var ForgeXLS = {
       data['Revit ID'] = obj.name.match(/\d+/g)[0];      
       data['Name'] = obj.name.replace('[' + data['Revit ID'] + ']', '').trim();
       
-      console.log('data[Name]':+ data['Name']);                                               //intro
+      //console.log('data[Name]':+ data['Name']);                                               //intro
 
       for (var propGroup in obj.properties) {
         if (propGroup.indexOf('__') > -1) break;
@@ -224,7 +224,7 @@ var ForgeXLS = {
         }
       }
     });
-    console.log('data:'+ data);                                                            //intro
+    //console.log('data:'+ data);                                                            //intro
     return data;
   }
 };
@@ -232,9 +232,9 @@ var ForgeXLS = {
 function Workbook() {
   if (!(this instanceof Workbook)) return new Workbook();
   this.SheetNames = [];
-  console.log('this.SheetNames :'+this.SheetNames);                                       //intro
+  //console.log('this.SheetNames :'+this.SheetNames);                                       //intro
   this.Sheets = {};
-  console.log('this.Sheets :'+this.Sheets);                                              //intro
+ // console.log('this.Sheets :'+this.Sheets);                                              //intro
 }
 
 function datenum(v, date1904) {
