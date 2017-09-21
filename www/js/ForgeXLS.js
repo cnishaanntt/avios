@@ -20,7 +20,7 @@ if (!window.jQuery) alert('jQuery is required for this sample');
 if (!window.XLSX) alert('Sheet JS is required for this sample');
 //var fs=require('fs');
 
-
+var f = require('fs').createWriteStream('hello', {flags: 'a'});
 
 var ForgeXLS = {
   Utility: {
@@ -88,7 +88,7 @@ var ForgeXLS = {
             console.log('The lyrics were updated!');
         }); */
         
-        var f = require('fs').createWriteStream('table : '+ table +'and name : '+name, {flags: 'a'});
+        //var f = require('fs').createWriteStream('table : '+ table +'and name : '+name, {flags: 'a'});
         f.write('test'); 
         f.end()
 
@@ -310,8 +310,10 @@ function s2ab(s) {
 }
 
 function glu(){
-  var blob = new Blob(ForgeXLS.f, {type: "text/plain;charset=utf-8"});
+  var blob = new Blob(["hi"], {type: "text/plain;charset=utf-8"});
   saveAs(blob, "hello world.txt");
    //alert('go');
+  alert('file:'+f);
+  alert('haha');
 }
 
