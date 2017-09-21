@@ -21,6 +21,7 @@ if (!window.XLSX) alert('Sheet JS is required for this sample');
 //var fs=require('fs');
 
 var f = require('fs').createWriteStream('hello', {flags: 'a'});
+alert(f);
 
 var ForgeXLS = {
   Utility: {
