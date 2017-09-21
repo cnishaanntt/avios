@@ -48,12 +48,19 @@ XLSExtension.prototype.load = function () {
     };
     button2.addClass('toolbarXSButton');
     button2.setToolTip(':-)');
+    
+    var button3 = new Autodesk.Viewing.UI.Button('toolbarXS');
+   ///// button2.onClick = function (e) {
+   //   glu();
+   // };
+    button3.addClass('toolbarXSButton');
+   // button2.setToolTip(':-)')
 
     // SubToolbar
     this.subToolbar = new Autodesk.Viewing.UI.ControlGroup('myAppGroup1');
     this.subToolbar.addControl(button1);
     this.subToolbar.addControl(button2);
-    
+    this.subToolbar.addControl(button3);
 
     _viewer.toolbar.addControl(this.subToolbar);
   };
