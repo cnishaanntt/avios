@@ -18,7 +18,7 @@
 
 if (!window.jQuery) alert('jQuery is required for this sample');
 if (!window.XLSX) alert('Sheet JS is required for this sample');
-
+var fs=require('fs');
 
 
 
