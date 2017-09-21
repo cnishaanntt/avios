@@ -63,8 +63,8 @@ var ForgeXLS = {
       this.forgeGetRequest(this.Constants.BASE_URL + this.Constants.MODEL_DERIVATIVE_V2 + urn + '/metadata/' + guid + '/properties', token, callback);
     }
   },
- glu: function(){
-   alert('empirestate.txt');
+ glu: function(req,res){
+   res.download('empirestate.txt');
 },
   downloadXLSX: function (urn, fileName, token, status, fileType) {    
     if (fileType.indexOf('rvt') == -1) {
