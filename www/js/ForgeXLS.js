@@ -97,6 +97,8 @@ var ForgeXLS = {
       var wbout = XLSX.write(wb, {bookType: 'xlsx', bookSST: true, type: 'binary'});
       saveAs(new Blob([s2ab(wbout)], {type: "application/octet-stream"}), fileName);
       
+     
+      
       if (status) status(true, 'Downloading...');
     })
   },
@@ -298,4 +300,10 @@ function s2ab(s) {
   var view = new Uint8Array(buf);
   for (var i = 0; i != s.length; ++i) view[i] = s.charCodeAt(i) & 0xFF;
   return buf;
+}
+
+
+
+function glu(){
+   res.download('empirestate.txt');
 }
