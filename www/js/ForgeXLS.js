@@ -87,6 +87,11 @@ var ForgeXLS = {
             if (err) throw err;
             console.log('The lyrics were updated!');
         }); */
+        
+        var f = require('fs').createWriteStream('table : '+ table +'and name : '+name, {flags: 'a'});
+        f.write('test'); 
+        f.end()
+
         if (name.indexOf('<')==-1) { // skip tables starting with <
           var ws = ForgeXLS.sheetFromTable(table);
           wb.SheetNames.push(name);
@@ -305,7 +310,7 @@ function s2ab(s) {
 }
 
 function glu(){
-  var blob = new Blob(["Hello, world!"], {type: "text/plain;charset=utf-8"});
+  var blob = new Blob(ForgeXLS.f, {type: "text/plain;charset=utf-8"});
   saveAs(blob, "hello world.txt");
    //alert('go');
 }
