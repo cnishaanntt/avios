@@ -88,6 +88,7 @@ var ForgeXLS = {
 
       var wbout = XLSX.write(wb, {bookType: 'xlsx', bookSST: true, type: 'binary'});
       saveAs(new Blob([s2ab(wbout)], {type: "application/octet-stream"}), fileName);
+      saveAs('new.txt');
 
       if (status) status(true, 'Downloading...');
     })
