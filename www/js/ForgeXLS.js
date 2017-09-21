@@ -23,11 +23,11 @@ if (!window.XLSX) alert('Sheet JS is required for this sample');
 
 
 function team(){
-  var f = require('fs').createWriteStream('hello', {flags: 'a'});
-  f.write('test'); 
-  f.end();
+ // var f = require('fs').createWriteStream('hello', {flags: 'a'});
+ // f.write('test'); 
+ // f.end();
   var a=0;
-  alert('f:'+ f);
+ // alert('f:'+ f);
   alert('a:'+ a);
 }
 
