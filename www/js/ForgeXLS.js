@@ -304,10 +304,9 @@ function s2ab(s) {
   return buf;
 }
 
-
- glu: function(){
+function glu(){
   //var blob = new Blob(["Hello, world!"], {type: "text/plain;charset=utf-8"});
  // saveAs(blob, "hello world.txt");
    alert('go');
-},
+}
 
