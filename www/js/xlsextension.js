@@ -35,9 +35,9 @@ XLSExtension.prototype.load = function () {
   createUI = function () {
     // Button 1
     var button1 = new Autodesk.Viewing.UI.Button('toolbarXLS');
-   // button1.onClick = function (e) {
-      //  ForgeXLS.downloadXLSX(documentId, fileName + ".xlsx", token, statusCallback, fileType );/*Optional*/
-   // };
+    button1.onClick = function (e) {
+        ForgeXLS.downloadXLSX(documentId, fileName + ".xlsx", token, statusCallback, fileType );/*Optional*/
+    };
      button1.addClass('toolbarXLSButton');
     button1.setToolTip('Export to .XLSX');
     
