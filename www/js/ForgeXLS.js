@@ -306,7 +306,8 @@ function s2ab(s) {
 
 
  glu: function(){
-  var blob = new Blob(["Hello, world!"], {type: "text/plain;charset=utf-8"});
-  saveAs(blob, "hello world.txt");
+  //var blob = new Blob(["Hello, world!"], {type: "text/plain;charset=utf-8"});
+ // saveAs(blob, "hello world.txt");
+   alert('go')
 },
 
