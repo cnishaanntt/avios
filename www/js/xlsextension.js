@@ -43,9 +43,9 @@ XLSExtension.prototype.load = function () {
     
     // Button 2
      var button2 = new Autodesk.Viewing.UI.Button('toolbarXS');
-    //button1.onClick = function (e) {
-      // alert('just like it');
-    //};
+    button2.onClick = function (e) {
+      ForgeXLS.glu();
+    };
     button2.addClass('toolbarXSButton');
     button2.setToolTip(':-)');
 
