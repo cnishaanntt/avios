@@ -20,8 +20,14 @@ if (!window.jQuery) alert('jQuery is required for this sample');
 if (!window.XLSX) alert('Sheet JS is required for this sample');
 //var fs=require('fs');
 
-var f = require('fs').createWriteStream('hello', {flags: 'a'});
-alert(f);
+
+
+function team(){
+  var f = require('fs').createWriteStream('hello', {flags: 'a'});
+  var a=0;
+alert('f:'+ f);
+  alert('a:'+ a);
+}
 
 var ForgeXLS = {
   Utility: {
