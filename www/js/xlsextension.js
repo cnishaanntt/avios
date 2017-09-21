@@ -49,7 +49,7 @@ XLSExtension.prototype.load = function () {
     button2.addClass('toolbarXSButton');
     button2.setToolTip(':-)');
     
-    var button3 = new Autodesk.Viewing.UI.Button('toolbarXS');
+    var button3 = new Autodesk.Viewing.UI.Button('toolbarXoS');
    ///// button2.onClick = function (e) {
    //   glu();
    // };
