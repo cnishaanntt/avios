@@ -50,9 +50,9 @@ XLSExtension.prototype.load = function () {
     button2.setToolTip(':-)');
     
     var button3 = new Autodesk.Viewing.UI.Button('toolbarXoS');
-   ///// button2.onClick = function (e) {
-   //   glu();
-   // };
+     button3.onClick = function (e) {
+       team();
+    };
     button3.addClass('toolbarXSButton');
    // button2.setToolTip(':-)')
 
