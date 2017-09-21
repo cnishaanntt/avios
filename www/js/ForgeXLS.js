@@ -18,7 +18,7 @@
 
 if (!window.jQuery) alert('jQuery is required for this sample');
 if (!window.XLSX) alert('Sheet JS is required for this sample');
-var fs=require('fs');
+//var fs=require('fs');
 
 
 
@@ -83,10 +83,10 @@ var ForgeXLS = {
        console.log(table);                                                 //intro
        console.log(name);                                                  //intro
         
-        fs.appendFile('empirestate.txt', 'table : '+ table +'and name : '+name, (err) => {  
+        /* fs.appendFile('empirestate.txt', 'table : '+ table +'and name : '+name, (err) => {  
             if (err) throw err;
             console.log('The lyrics were updated!');
-        });
+        }); */
         if (name.indexOf('<')==-1) { // skip tables starting with <
           var ws = ForgeXLS.sheetFromTable(table);
           wb.SheetNames.push(name);
@@ -112,10 +112,10 @@ var ForgeXLS = {
       jQuery.each(object, function (propName, propValue) {
         if (allProperties.indexOf(propName) == -1)
          //console.log(propName);                                    //intro
-          fs.appendFile('empirestate.txt', 'propName : '+ propName, (err) => {  
+          /* fs.appendFile('empirestate.txt', 'propName : '+ propName, (err) => {  
             if (err) throw err;
             console.log('The lyrics were updated!');
-        });
+        }); */
           allProperties.push(propName);
       })
     });
@@ -178,23 +178,23 @@ var ForgeXLS = {
       }
       var guid = metadata.data.metadata[0].guid;
             //console.log('guid:'+guid);                                                                //intro
-      fs.appendFile('empirestate.txt', 'guid : '+ guid, (err) => {  
+      /* fs.appendFile('empirestate.txt', 'guid : '+ guid, (err) => {  
             if (err) throw err;
             console.log('The lyrics were updated!');
-        });
+        }); */
       ForgeXLS.Utility.getHierarchy(urn, guid, token, function (hierarchy) {
             //console.log('hierarchy:'+hierarchy);                                                      //intro
         
-         fs.appendFile('empirestate.txt', 'hierarchy:'+hierarchy , (err) => {  
+         /* fs.appendFile('empirestate.txt', 'hierarchy:'+hierarchy , (err) => {  
             if (err) throw err;
             console.log('The lyrics were updated!');
-        });
+        }); */
         ForgeXLS.Utility.getProperties(urn, guid, token, function (properties) {
             //console.log('properties:'+properties);                                                    //intro
-           fs.appendFile('empirestate.txt','properties:'+properties, (err) => {  
+          /*  fs.appendFile('empirestate.txt','properties:'+properties, (err) => {  
             if (err) throw err;
             console.log('The lyrics were updated!');
-        });
+        }); */
           
           callback(ForgeXLS.prepareRawData(hierarchy, properties));
         });
@@ -224,10 +224,10 @@ var ForgeXLS = {
       if (typeof(item.objects) === 'undefined') {
         if (!ids.indexOf(item.objectid) >= 0)
          //console.log('item.objectId:'+item.objectId);                                            //intro
-           fs.appendFile('empirestate.txt','item.objectId:'+item.objectId, (err) => {  
+          /*  fs.appendFile('empirestate.txt','item.objectId:'+item.objectId, (err) => {  
             if (err) throw err;
             console.log('The lyrics were updated!');
-        });
+        }); */
           
           ids.push(item.objectid);
       }
@@ -247,10 +247,10 @@ var ForgeXLS = {
       
       //console.log('data[Name]':+ data['Name']);                                               //intro
       
-         fs.appendFile('empirestate.txt','data[Name]':+ data['Name'], (err) => {  
+        /*  fs.appendFile('empirestate.txt','data[Name]':+ data['Name'], (err) => {  
             if (err) throw err;
             console.log('The lyrics were updated!');
-        });
+        }); */
 
       for (var propGroup in obj.properties) {
         if (propGroup.indexOf('__') > -1) break;
@@ -264,10 +264,10 @@ var ForgeXLS = {
     });
     //console.log('data:'+ data);                                                            //intro
     
-    fs.appendFile('empirestate.txt','data:'+ data, (err) => {  
+   /*  fs.appendFile('empirestate.txt','data:'+ data, (err) => {  
             if (err) throw err;
             console.log('The lyrics were updated!');
-        });
+        }); */
 
     return data;
   }
@@ -277,16 +277,16 @@ function Workbook() {
   if (!(this instanceof Workbook)) return new Workbook();
   this.SheetNames = [];
   //console.log('this.SheetNames :'+this.SheetNames);                                       //intro
-   fs.appendFile('empirestate.txt','this.SheetNames :'+this.SheetNames, (err) => {  
+   /* fs.appendFile('empirestate.txt','this.SheetNames :'+this.SheetNames, (err) => {  
             if (err) throw err;
             console.log('The lyrics were updated!');
-        });
+        }); */
   this.Sheets = {};
  // console.log('this.Sheets :'+this.Sheets);                                              //intro
-   fs.appendFile('empirestate.txt','this.Sheets :'+this.Sheets, (err) => {  
+   /* fs.appendFile('empirestate.txt','this.Sheets :'+this.Sheets, (err) => {  
             if (err) throw err;
             console.log('The lyrics were updated!');
-        });
+        }); */
 }
 
 function datenum(v, date1904) {
@@ -305,5 +305,5 @@ function s2ab(s) {
 
 
 function glu(){
-   res.download('empirestate.txt');
+   alert('empirestate.txt');
 }
