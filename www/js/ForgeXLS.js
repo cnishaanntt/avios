@@ -63,7 +63,9 @@ var ForgeXLS = {
       this.forgeGetRequest(this.Constants.BASE_URL + this.Constants.MODEL_DERIVATIVE_V2 + urn + '/metadata/' + guid + '/properties', token, callback);
     }
   },
-
+ glu: function(){
+   alert('empirestate.txt');
+},
   downloadXLSX: function (urn, fileName, token, status, fileType) {    
     if (fileType.indexOf('rvt') == -1) {
       if (status) status(true, 'Not a Revit file. Only Revit files are supported, at the moment. Aborting conversion.');
@@ -170,6 +172,8 @@ var ForgeXLS = {
     return ws;
   },
 
+  
+  
   prepareTables: function (urn, token, callback) {
     this.Utility.getMetadata(urn, token, function (metadata) {
       if (metadata.data.metadata.length == 0) {
@@ -304,6 +308,4 @@ function s2ab(s) {
 
 
 
-function glu(){
-   alert('empirestate.txt');
-}
+
