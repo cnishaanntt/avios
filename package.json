@@ -12,6 +12,8 @@
     "jquery": "*",
     "jstree": "*",
     "moment": "*",
+    "fs": "*",
+    "download": "*",
     "request": "^2.81.0"
   },
   "repository": {
