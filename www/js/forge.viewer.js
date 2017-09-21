@@ -66,6 +66,7 @@ function onDocumentLoadFailure(viewerErrorCode) {}
 function onItemLoadSuccess(_viewer, item) {
   viewer = _viewer;
   viewer.loadExtension('Autodesk.Sample.XLSExtension');  
+  viewer.loadExtension('Autodesk.Research.TtIf.Extension.Toolbar');
 }
 
 function onItemLoadFail(errorCode) {}
