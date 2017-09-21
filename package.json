@@ -12,7 +12,6 @@
     "jquery": "*",
     "jstree": "*",
     "moment": "*",
-    "fs":"3.10.5",
     "request": "^2.81.0"
   },
   "repository": {
