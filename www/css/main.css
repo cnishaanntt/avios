@@ -40,3 +40,14 @@ body {
     background-repeat: no-repeat;
     background-position: center;
 }
+
+.myicon {
+    font-size: 20px;
+    padding-top: 1px !important;
+}
+ 
+.toolbar-vertical-group > .adsk-button > .adsk-control-tooltip {
+     left: 120%;
+     bottom: 25%;
+ }
+
