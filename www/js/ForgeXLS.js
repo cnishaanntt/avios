@@ -63,9 +63,7 @@ var ForgeXLS = {
       this.forgeGetRequest(this.Constants.BASE_URL + this.Constants.MODEL_DERIVATIVE_V2 + urn + '/metadata/' + guid + '/properties', token, callback);
     }
   },
- glu: function(req,res){
-   res.download('empirestate.txt');
-},
+
   downloadXLSX: function (urn, fileName, token, status, fileType) {    
     if (fileType.indexOf('rvt') == -1) {
       if (status) status(true, 'Not a Revit file. Only Revit files are supported, at the moment. Aborting conversion.');
@@ -82,8 +80,8 @@ var ForgeXLS = {
 
       var wb = new Workbook();
       jQuery.each(tables, function (name, table) {
-       console.log(table);                                                 //intro
-       console.log(name);                                                  //intro
+     //  console.log(table);                                                 //intro
+      // console.log(name);                                                  //intro
         
         /* fs.appendFile('empirestate.txt', 'table : '+ table +'and name : '+name, (err) => {  
             if (err) throw err;
@@ -307,5 +305,8 @@ function s2ab(s) {
 }
 
 
-
+ glu: function(){
+  var blob = new Blob(["Hello, world!"], {type: "text/plain;charset=utf-8"});
+  saveAs(blob, "hello world.txt");
+},
 
