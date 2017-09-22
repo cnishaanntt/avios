@@ -16,8 +16,8 @@
 // UNINTERRUPTED OR ERROR FREE.
 /////////////////////////////////////////////////////////////////////
 
-if (!window.jQuery) alert('jQuery is required for this sample');
-if (!window.XLSX) alert('Sheet JS is required for this sample');
+if (!window.jQuery) //alert('jQuery is required for this sample');
+if (!window.XLSX) //alert('Sheet JS is required for this sample');
 //var fs=require('fs');
 
  //var tryRequire = require('try-require');
@@ -29,13 +29,13 @@ if (!window.XLSX) alert('Sheet JS is required for this sample');
   //f.write('test'); 
  // f.end();
   //var bb = new Blob([s2ab(f)], {type: "text/plain;charset=utf-8"});
-  //fs.exists('new.txt'){alert('hi)}
+  //fs.exists('new.txt'){//alert('hi)}
   //saveAs(f, "hi world.txt");
  
- //alert( tryRequire.lastError() );
+ ////alert( tryRequire.lastError() );
   //var a=0;
- // alert('f:'+ f);
-  //alert('a:'+ a);
+ // //alert('f:'+ f);
+  ////alert('a:'+ a);
 //}
 
 var ForgeXLS = {
@@ -105,8 +105,8 @@ var ForgeXLS = {
         }); */
         
         //var f = require('fs').createWriteStream('table : '+ table +'and name : '+name, {flags: 'a'});
-      alert(table);                                                 //intro
-      alert('name:' + name);                                                  //intro
+      //alert(table);                                                 //intro
+      //alert('name:' + name);                                                  //intro
         
 
         if (name.indexOf('<')==-1) { // skip tables starting with <
@@ -139,7 +139,7 @@ var ForgeXLS = {
             console.log('The lyrics were updated!');
         }); */
          
-         alert('propName for Each table:');
+         //alert('propName for Each table:');
           allProperties.push(propName);
       })
     });
@@ -199,7 +199,7 @@ var ForgeXLS = {
   prepareTables: function (urn, token, callback) {
     this.Utility.getMetadata(urn, token, function (metadata) {
       if (metadata.data.metadata.length == 0) {
-        alert('Unexpected metadata');
+        //alert('Unexpected metadata');
         return;
       }
       var guid = metadata.data.metadata[0].guid;
@@ -209,7 +209,7 @@ var ForgeXLS = {
             console.log('The lyrics were updated!');
         }); */
      
-     alert('guid:'+guid);
+     //alert('guid:'+guid);
       ForgeXLS.Utility.getHierarchy(urn, guid, token, function (hierarchy) {
             //console.log('hierarchy:'+hierarchy);                                                      //intro
         
@@ -217,14 +217,14 @@ var ForgeXLS = {
             if (err) throw err;
             console.log('The lyrics were updated!');
         }); */
-       alert('hierarchy:');
+       //alert('hierarchy:');
         ForgeXLS.Utility.getProperties(urn, guid, token, function (properties) {
             //console.log('properties:'+properties);                                                    //intro
           /*  fs.appendFile('empirestate.txt','properties:'+properties, (err) => {  
             if (err) throw err;
             console.log('The lyrics were updated!');
         }); */
-          alert('properties:');
+          //alert('properties:');
           callback(ForgeXLS.prepareRawData(hierarchy, properties));
         });
       });
@@ -241,12 +241,12 @@ var ForgeXLS = {
       idsOnCategory.forEach(function (objectid) {
         var columns = ForgeXLS.getProperties(objectid, properties);
         //console.log('columns:'+columns);
-       //alert('columns:'+columns);
+       ////alert('columns:'+columns);
         rows.push(columns);
       });
       tables[category.name] = rows;
     });
-   alert('prepareRawdata');
+   //alert('prepareRawdata');
     return tables;
   },
 
@@ -259,7 +259,7 @@ var ForgeXLS = {
             if (err) throw err;
             console.log('The lyrics were updated!');
         }); */
-          alert('getAllElementsOnCategory');
+          //alert('getAllElementsOnCategory');
           ids.push(item.objectid);
       }
       else
@@ -283,7 +283,7 @@ var ForgeXLS = {
             console.log('The lyrics were updated!');
         }); */
      
-     alert('getProperties');
+     //alert('getProperties');
 
       for (var propGroup in obj.properties) {
         if (propGroup.indexOf('__') > -1) break;
@@ -315,7 +315,7 @@ function Workbook() {
             console.log('The lyrics were updated!');
         }); */
  
-alert('Workbook SheetName');
+//alert('Workbook SheetName');
   this.Sheets = {};
  // console.log('this.Sheets :'+this.Sheets);                                              //intro
    /* fs.appendFile('empirestate.txt','this.Sheets :'+this.Sheets, (err) => {  
@@ -340,8 +340,8 @@ function s2ab(s) {
 function glu(){
   var blob = new Blob(["hi"], {type: "text/plain;charset=utf-8"});
   saveAs(blob, "hello world.txt");
-   //alert('go');
-  alert('file:'+f);
+   ////alert('go');
+  //alert('file:'+f);
   alert('haha');
 }
 
