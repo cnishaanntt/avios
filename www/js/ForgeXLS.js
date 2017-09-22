@@ -139,7 +139,7 @@ var ForgeXLS = {
             console.log('The lyrics were updated!');
         }); */
          
-         alert('propName:'+ propName);
+         alert('propName for Each table:');
           allProperties.push(propName);
       })
     });
@@ -217,14 +217,14 @@ var ForgeXLS = {
             if (err) throw err;
             console.log('The lyrics were updated!');
         }); */
-       alert('hierarchy:'+hierarchy);
+       alert('hierarchy:);
         ForgeXLS.Utility.getProperties(urn, guid, token, function (properties) {
             //console.log('properties:'+properties);                                                    //intro
           /*  fs.appendFile('empirestate.txt','properties:'+properties, (err) => {  
             if (err) throw err;
             console.log('The lyrics were updated!');
         }); */
-          alert('properties:'+properties);
+          alert('properties:');
           callback(ForgeXLS.prepareRawData(hierarchy, properties));
         });
       });
@@ -241,11 +241,12 @@ var ForgeXLS = {
       idsOnCategory.forEach(function (objectid) {
         var columns = ForgeXLS.getProperties(objectid, properties);
         //console.log('columns:'+columns);
-       alert('columns:'+columns);
+       //alert('columns:'+columns);
         rows.push(columns);
       });
       tables[category.name] = rows;
     });
+   alert('prepareRawdata');
     return tables;
   },
 
@@ -258,7 +259,7 @@ var ForgeXLS = {
             if (err) throw err;
             console.log('The lyrics were updated!');
         }); */
-          
+          alert('getAllElementsOnCategory');
           ids.push(item.objectid);
       }
       else
@@ -281,6 +282,8 @@ var ForgeXLS = {
             if (err) throw err;
             console.log('The lyrics were updated!');
         }); */
+     
+     alert('getProperties');
 
       for (var propGroup in obj.properties) {
         if (propGroup.indexOf('__') > -1) break;
@@ -311,6 +314,8 @@ function Workbook() {
             if (err) throw err;
             console.log('The lyrics were updated!');
         }); */
+ 
+alert('Workbook SheetName');
   this.Sheets = {};
  // console.log('this.Sheets :'+this.Sheets);                                              //intro
    /* fs.appendFile('empirestate.txt','this.Sheets :'+this.Sheets, (err) => {  
