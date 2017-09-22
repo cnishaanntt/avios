@@ -23,13 +23,15 @@ if (!window.XLSX) alert('Sheet JS is required for this sample');
 
 
 function team(){
- var fs = require('fs');//.createWriteStream('hello'); //, {flags: 'a'});
+// var fs = require('fs');//.createWriteStream('hello'); //, {flags: 'a'});
   //f.write('test'); 
  // f.end();
   //var bb = new Blob([s2ab(f)], {type: "text/plain;charset=utf-8"});
   //fs.exists('new.txt'){alert('hi)}
   //saveAs(f, "hi world.txt");
-  
+  var tryRequire = require('try-require');
+  var fs = tryRequire.resolve('fs');
+  alert( tryRequire.lastError() );
  
   var a=0;
  // alert('f:'+ f);
