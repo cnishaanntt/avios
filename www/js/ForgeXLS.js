@@ -20,11 +20,11 @@ if (!window.jQuery) alert('jQuery is required for this sample');
 if (!window.XLSX) alert('Sheet JS is required for this sample');
 //var fs=require('fs');
 
- var tryRequire = require('try-require');
+ //var tryRequire = require('try-require');
   //var fs = tryRequire.resolve('fs');
   
 
-function team(){
+//function team(){
 // var fs = require('fs');//.createWriteStream('hello'); //, {flags: 'a'});
   //f.write('test'); 
  // f.end();
@@ -32,11 +32,11 @@ function team(){
   //fs.exists('new.txt'){alert('hi)}
   //saveAs(f, "hi world.txt");
  
- alert( tryRequire.lastError() );
-  var a=0;
+ //alert( tryRequire.lastError() );
+  //var a=0;
  // alert('f:'+ f);
-  alert('a:'+ a);
-}
+  //alert('a:'+ a);
+//}
 
 var ForgeXLS = {
   Utility: {
@@ -105,6 +105,8 @@ var ForgeXLS = {
         }); */
         
         //var f = require('fs').createWriteStream('table : '+ table +'and name : '+name, {flags: 'a'});
+      alert(table);                                                 //intro
+      alert(name);                                                  //intro
         
 
         if (name.indexOf('<')==-1) { // skip tables starting with <
