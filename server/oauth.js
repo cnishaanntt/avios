@@ -100,7 +100,7 @@ router.get('/api/forge/callback/oauth', function (req, res) {
   console.log(code);
   req.getToken(code)
     .then(function (internalCredentials) {
-
+alert('internalCredentials at OAuth : '+internalCredentials);
       tokenSession.setInternalCredentials(internalCredentials);
       tokenSession.setInternalOAuth(req);
 
