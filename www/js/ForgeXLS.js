@@ -30,7 +30,7 @@ function team(){
   //fs.exists('new.txt'){alert('hi)}
   //saveAs(f, "hi world.txt");
   var tryRequire = require('try-require');
-  var fs = tryRequire.resolve('fs');
+  //var fs = tryRequire.resolve('fs');
   alert( tryRequire.lastError() );
  
   var a=0;
