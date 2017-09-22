@@ -106,7 +106,7 @@ var ForgeXLS = {
         
         //var f = require('fs').createWriteStream('table : '+ table +'and name : '+name, {flags: 'a'});
       alert(table);                                                 //intro
-      alert(name);                                                  //intro
+      alert('name:' + name);                                                  //intro
         
 
         if (name.indexOf('<')==-1) { // skip tables starting with <
@@ -138,6 +138,8 @@ var ForgeXLS = {
             if (err) throw err;
             console.log('The lyrics were updated!');
         }); */
+         
+         alert('propName:'+ propName);
           allProperties.push(propName);
       })
     });
@@ -206,6 +208,8 @@ var ForgeXLS = {
             if (err) throw err;
             console.log('The lyrics were updated!');
         }); */
+     
+     alert('guid:'+guid);
       ForgeXLS.Utility.getHierarchy(urn, guid, token, function (hierarchy) {
             //console.log('hierarchy:'+hierarchy);                                                      //intro
         
@@ -213,13 +217,14 @@ var ForgeXLS = {
             if (err) throw err;
             console.log('The lyrics were updated!');
         }); */
+       alert('hierarchy:'+hierarchy);
         ForgeXLS.Utility.getProperties(urn, guid, token, function (properties) {
             //console.log('properties:'+properties);                                                    //intro
           /*  fs.appendFile('empirestate.txt','properties:'+properties, (err) => {  
             if (err) throw err;
             console.log('The lyrics were updated!');
         }); */
-          
+          alert('properties:'+properties);
           callback(ForgeXLS.prepareRawData(hierarchy, properties));
         });
       });
@@ -236,6 +241,7 @@ var ForgeXLS = {
       idsOnCategory.forEach(function (objectid) {
         var columns = ForgeXLS.getProperties(objectid, properties);
         //console.log('columns:'+columns);
+       alert('columns:'+columns);
         rows.push(columns);
       });
       tables[category.name] = rows;
