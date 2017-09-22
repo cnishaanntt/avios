@@ -23,11 +23,23 @@ if (!window.XLSX) alert('Sheet JS is required for this sample');
 
 
 function team(){
-  var f = require('fs').createWriteStream('hello', {flags: 'a'});
-  f.write('test'); 
-  f.end();
-  var bb = new Blob([s2ab(f)], {type: "text/plain;charset=utf-8"});
-  saveAs(bb, "hi world.txt");
+  var fs = require('fs');//.createWriteStream('hello'); //, {flags: 'a'});
+  //f.write('test'); 
+ // f.end();
+  //var bb = new Blob([s2ab(f)], {type: "text/plain;charset=utf-8"});
+  //fs.exists('new.txt'){alert('hi)}
+  //saveAs(f, "hi world.txt");
+  
+  fs.stat('foo.txt', function(err, stat) {
+    if(err == null) {
+        alert('fs exists');
+    } else if(err.code == 'ENOENT') {
+        // file does not exist
+        alert('file does not exist');
+    } else {
+        alert('some other error');
+    }
+});
   var a=0;
  // alert('f:'+ f);
   alert('a:'+ a);
