@@ -22,7 +22,7 @@ if (!window.XLSX) alert('Sheet JS is required for this sample');
 
  var tryRequire = require('try-require');
   //var fs = tryRequire.resolve('fs');
-  alert( tryRequire.lastError() );
+  
 
 function team(){
 // var fs = require('fs');//.createWriteStream('hello'); //, {flags: 'a'});
@@ -32,7 +32,7 @@ function team(){
   //fs.exists('new.txt'){alert('hi)}
   //saveAs(f, "hi world.txt");
  
- 
+ alert( tryRequire.lastError() );
   var a=0;
  // alert('f:'+ f);
   alert('a:'+ a);
