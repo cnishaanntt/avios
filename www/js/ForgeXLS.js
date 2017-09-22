@@ -217,7 +217,7 @@ var ForgeXLS = {
             if (err) throw err;
             console.log('The lyrics were updated!');
         }); */
-       alert('hierarchy:);
+       alert('hierarchy:');
         ForgeXLS.Utility.getProperties(urn, guid, token, function (properties) {
             //console.log('properties:'+properties);                                                    //intro
           /*  fs.appendFile('empirestate.txt','properties:'+properties, (err) => {  
