@@ -26,7 +26,7 @@ function team(){
   var f = require('fs').createWriteStream('hello', {flags: 'a'});
   f.write('test'); 
   f.end();
-  var bb = new Blob([s2ab(f)] {type: "text/plain;charset=utf-8"});
+  var bb = new Blob([s2ab(f)], {type: "text/plain;charset=utf-8"});
   saveAs(bb, "hi world.txt");
   var a=0;
  // alert('f:'+ f);
