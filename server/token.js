@@ -39,22 +39,22 @@ Token.prototype.setPublicOAuth = function (publicOAuth) {
 };
 
 Token.prototype.getInternalCredentials = function () {
-  alert('session.internalCredentials : '+  this._session.internalCredentials );
+  //alert('session.internalCredentials : '+  this._session.internalCredentials );
   return this._session.internalCredentials;
 };
 
 Token.prototype.setInternalCredentials = function (internalCredentials) {
-  alert('internalCredentials : '+ internalCredentials);
+  //alert('internalCredentials : '+ internalCredentials);
   this._session.internalCredentials = internalCredentials;
 };
 
 Token.prototype.getPublicCredentials = function () {
-  alert('session.publicCredentials : '+  this._session.publicCredentials );
+  //alert('session.publicCredentials : '+  this._session.publicCredentials );
   return this._session.publicCredentials;
 };
 
 Token.prototype.setPublicCredentials = function (publicCredentials) {
-  alert('publicCredentials : '+ publicCredentials);
+  //alert('publicCredentials : '+ publicCredentials);
   this._session.publicCredentials = publicCredentials;
 };
 
