@@ -1,20 +1,4 @@
-Skip to content
- 
-Search…
-All gists
-GitHub
-Sign up for a GitHub account Sign in
-Create a gist now
-Instantly share code, notes, and snippets.
- Star 1  Fork 0 @leefsmpleefsmp/Autodesk.ADN.Viewing.Extension.Markup.js
-Created 2 years ago
-Embed  
-<script src="https://gist.github.com/leefsmp/aba0627a5a0892ee32f5.js"></script>
-  Download ZIP
- Code  Revisions 1  Stars 1
-View & Data API Markup Extension
-Raw
- Autodesk.ADN.Viewing.Extension.Markup.js
+
 /////////////////////////////////////////////////////////////////////
 // Autodesk.ADN.Viewing.Extension.Markup
 // by Philippe Leefsma, Feb 2016
@@ -822,16 +806,3 @@ Autodesk.ADN.Viewing.Extension.Markup.prototype.constructor =
 Autodesk.Viewing.theExtensionManager.registerExtension(
   'Autodesk.ADN.Viewing.Extension.Markup',
   Autodesk.ADN.Viewing.Extension.Markup);
-Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment
-© 2017 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-API
-Training
-Shop
-Blog
-About
