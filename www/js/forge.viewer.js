@@ -67,6 +67,7 @@ function onItemLoadSuccess(_viewer, item) {
   viewer = _viewer;
   viewer.loadExtension('Autodesk.Sample.XLSExtension');  
   viewer.loadExtension('Autodesk.Research.TtIf.Extension.Toolbar');
+  viewer.loadExtension('Autodesk.ADN.Viewing.Extension.Markup');
 }
 
 function onItemLoadFail(errorCode) {}
