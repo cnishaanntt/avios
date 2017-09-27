@@ -9,7 +9,8 @@ AutodeskNamespace("Autodesk.ADN.Viewing.Extension");
 Autodesk.ADN.Viewing.Extension.Markup = function (viewer, options) {
 
   Autodesk.Viewing.Extension.call(this, viewer, options);
-
+  var _viewer = viewer; 
+  
   var _panel = null;
   
   /////////////////////////////////////////////////////////////////
@@ -83,7 +84,8 @@ Autodesk.ADN.Viewing.Extension.Markup = function (viewer, options) {
   //  Extension unload callback
   //
   /////////////////////////////////////////////////////////////////
-  this.unload = function () {
+  
+    this.unload = function () {
 
     if(_panel) {
 
@@ -106,7 +108,7 @@ Autodesk.ADN.Viewing.Extension.Markup = function (viewer, options) {
   //
   //
   /////////////////////////////////////////////////////////////////
-  function loadCss(css) {
+ function loadCss(css) {
 
     css.forEach((path)=>{
 
